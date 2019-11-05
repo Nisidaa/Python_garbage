@@ -1,11 +1,6 @@
 # Методом перестановок упорядочить по убыванию массив, содержащий 12 целых чисел
 import random
 
-mass = []
-random.seed(5)
-for i in range(12):
-    mass.append(random.randrange(100))
-print(mass)
 
 def swap(param, param1):
     a=param
@@ -14,6 +9,11 @@ def swap(param, param1):
     return param, param1
 
 
+mass = []
+random.seed(5)
+for i in range(12):
+    mass.append(random.randrange(100))
+print(mass)
 for i in range(11):
     for j in range(11):
         if mass[j] < mass[j+1]:
