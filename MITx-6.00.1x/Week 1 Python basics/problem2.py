@@ -8,7 +8,7 @@ Number of times bob occurs is: 2
 str = input("Enter test string here: ")
 count = 0
 str = str.lower()
-for i in range(len(str)-2):
-    if str[i]=='b' and str[i+1]=='o' and str[i+2]=='b':
-        count+=1
+for i in range(len(str) - 2):
+    if str[i] == 'b' and str[i + 1] == 'o' and str[i + 2] == 'b':
+        count += 1
 print("String contains {0} bob".format(count))

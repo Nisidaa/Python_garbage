@@ -3,9 +3,9 @@ import random
 
 
 def swap(param, param1):
-    a=param
-    param=param1
-    param1=a
+    a = param
+    param = param1
+    param1 = a
     return param, param1
 
 
@@ -16,6 +16,6 @@ for i in range(12):
 print(mass)
 for i in range(11):
     for j in range(11):
-        if mass[j] < mass[j+1]:
-            mass[j], mass[j+1] = swap(mass[j], mass[j+1])
+        if mass[j] < mass[j + 1]:
+            mass[j], mass[j + 1] = swap(mass[j], mass[j + 1])
 print(mass)
