@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov  1 23:29:43 2017
-
-@author: Mayur
-"""
 """
 Exercise: fourth power
 
@@ -16,10 +10,6 @@ You should use the square procedure that you defined in an earlier exercise
 
 This function takes in one number and returns one number.
 """
-
-#code
+from Week2_Simple_Programs.square import square
 def fourthPower(x):
-    '''
-    x: int or float.
-    '''
-    return square(square(x))
+        return square(x) * square(x)

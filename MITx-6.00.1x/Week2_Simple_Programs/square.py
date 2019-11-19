@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov  1 23:22:47 2017
-
-@author: Mayur
-"""
 """
 Exercise: square
 
@@ -13,9 +7,12 @@ of that number.
 This function takes in one number and returns one number.
 """
 
-#code
+
 def square(x):
-    '''
-    x: int or float.
-    '''
-    return x*x
+    if type(x) == int or type(x) == float:
+        return x * x
+    elif str.isdigit(x):
+        return float(x) * float(x)
+    else:
+        raise TypeError
+
