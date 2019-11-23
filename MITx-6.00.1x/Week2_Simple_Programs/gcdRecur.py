@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov  6 23:43:22 2017
-
-@author: Mayur
-"""
 """
 Exercise: gcd recur
 
@@ -30,15 +24,3 @@ See this website for an example of Euclid's algorithm being used to find the gcd
 Write a function gcdRecur(a, b) that implements this idea recursively. This 
 function takes in two positive integers and returns one integer.
 """
-
-#code
-def gcdRecur(a, b):
-    '''
-    a, b: positive integers
-    
-    returns: a positive integer, the greatest common divisor of a & b.
-    '''
-    if a == 0 or b == 0:
-     return max(a,b)
-    else:
-     return gcdRecur(min(a,b), max(a,b)%min(a,b))

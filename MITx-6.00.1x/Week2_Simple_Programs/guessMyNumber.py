@@ -1,4 +1,3 @@
-
 """
 Exercise: guess my number
 
@@ -51,3 +50,23 @@ Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is
 too low. Enter 'c' to indicate I guessed correctly. c
 
 """
+low = 0
+high = 100
+pred = (low+high)//2
+
+print("Please think of a number between 0 and 100!")
+hint = 'q'
+while hint != 'c':
+    while not(hint=='h' or hint=='c' or hint=='l'):
+        print("Is your secret number " + str(pred) + "?")
+        hint = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is "
+                 "too low. Enter 'c' to indicate I guessed correctly.")
+    if hint=='h':
+        low = pred
+        pred = (low+high)//2
+        hint = 'q'
+    elif hint=='l':
+        high = pred
+        pred = (low + high) // 2
+        hint='q'
+print("Game over. Your secret number was: "+ str(pred))
