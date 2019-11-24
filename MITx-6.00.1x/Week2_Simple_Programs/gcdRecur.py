@@ -24,3 +24,14 @@ See this website for an example of Euclid's algorithm being used to find the gcd
 Write a function gcdRecur(a, b) that implements this idea recursively. This 
 function takes in two positive integers and returns one integer.
 """
+
+def gcd_r(a, b):
+    """
+    Function to find greatest common divisor of two numbers
+    :param a: int, first number
+    :param b: int, second number
+    :return: int, gcd
+    """
+    if b==0:
+        return a
+    else: return gcd_r(b, a%b)
