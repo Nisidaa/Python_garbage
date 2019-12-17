@@ -20,3 +20,22 @@ that is in alphabetical order. The function should return a boolean value.
 
 As you design the function, think very carefully about what the base cases should be.
 """
+def isIn(char, aStr):
+    """
+
+    :param char: character
+    :param aStr: sorted string
+    :return: bool is char in str
+    """
+    if len(aStr)==1:
+        if char==aStr[0]:
+            return True
+        else:
+            return False
+    elif char == aStr[int(len(aStr)/2)]:
+        return True
+    else:
+        if char>aStr[int(len(aStr)/2)]:
+            return isIn(char, aStr[int(len(aStr)/2):])
+        else:
+            return isIn(char, aStr[ : int(len(aStr)/2)])
